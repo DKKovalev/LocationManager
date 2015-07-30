@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/pref_title_notifications" />
+    <CheckBoxPreference
+        android:key="vibrate"
+        android:summary="@string/settings_vibrate_summary"
+        android:title="@string/pref_title_vibrate" />
+    <CheckBoxPreference
+        android:key="blink"
+        android:summary="@string/settings_blink_summary"
+        android:title="@string/settings_blink_title" />
+    <PreferenceCategory android:title="@string/pref_title_update_time" />
+    <ListPreference
+        android:defaultValue="1"
+        android:key = "update_time"
+        android:entries="@array/listArray"
+        android:entryValues="@array/listValues"
+        android:summary="@string/settings_update_summary"
+        android:title="@string/pref_title_update_time" />
+</PreferenceScreen>

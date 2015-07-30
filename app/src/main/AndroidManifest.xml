@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="locmanager.dkovalev.com.locationmanager" >
 
+    <uses-sdk android:minSdkVersion="17"/>
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -25,7 +27,23 @@
             android:name="com.google.android.maps.v2.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity android:name=".activities.MainActivity" >
+        <activity
+            android:name=".activities.MapsActivity"
+            android:label="@string/title_activity_maps" >
+        </activity>
+        <activity
+            android:name=".activities.AddNewPlaceActivity"
+            android:label="@string/title_activity_add_new_place" >
+        </activity>
+
+        <service
+            android:name=".assets.BackgroundIntentService"
+            android:exported="false" >
+        </service>
+
+        <activity
+            android:name=".activities.MainActivity"
+            android:label="@string/title_activity_main" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -33,20 +51,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.MapsActivity"
-            android:label="@string/title_activity_maps" >
-        </activity>
-
-        <service
-            android:name=".assets.LocationUpdateService"
-            android:enabled="true"
-            android:exported="true" >
-        </service>
-
-        <activity
-            android:name=".activities.AddNewPlaceActivity"
-            android:label="@string/title_activity_add_new_place" >
+            android:name=".activities.SettingsActivity"
+            android:label="@string/title_activity_settings" >
         </activity>
     </application>
-
 </manifest>

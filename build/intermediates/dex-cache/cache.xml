@@ -72,6 +72,13 @@
         <dex dex="C:\Android Programming\LocationManager\app\build\intermediates\pre-dexed\debug\classes-5d769b878e07b59152403d5e312a755832d00233.jar" />
     </item>
     <item
+        jar="C:\Users\PsichO\.gradle\caches\modules-2\files-2.1\com.nineoldandroids\library\2.4.0\e9b63380f3a242dbdbf103a2355ad7e43bad17cb\library-2.4.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="C:\Android Programming\LocationManager\app\build\intermediates\pre-dexed\debug\library-2.4.0-e2628b5e54e2e9413e2deccfe6af9d5c9a427fee.jar" />
+    </item>
+    <item
         jar="C:\Users\PsichO\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.3.1\ecb6e1f8e4b0e84c4b886c2f14a1500caf309757\gson-2.3.1.jar"
         jumboMode="false"
         revision="21.1.2"
@@ -91,6 +98,20 @@
         revision="21.1.2"
         sha1="fb04b12526b0073c7fb1ebb70c5842d82ee95596">
         <dex dex="C:\Android Programming\LocationManager\app\build\intermediates\pre-dexed\debug\classes-96c6038799be017c03310f4069a0a965a284b23c.jar" />
+    </item>
+    <item
+        jar="C:\Android Programming\LocationManager\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b8945fc23a7461c6fdde15753456d64b0a9358b">
+        <dex dex="C:\Android Programming\LocationManager\app\build\intermediates\pre-dexed\debug\classes-2d32853358d7c35c2715f3f542bc9a93c35b4b5b.jar" />
+    </item>
+    <item
+        jar="C:\Android Programming\LocationManager\app\build\intermediates\exploded-aar\com.melnykov\floatingactionbutton\1.3.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="8c6ebb7d087d1a30bf84356bd2aecf85309fc024">
+        <dex dex="C:\Android Programming\LocationManager\app\build\intermediates\pre-dexed\debug\classes-45885b22cfdf194be4ad8ba49773c5bbe9abb87e.jar" />
     </item>
     <item
         jar="C:\Android Programming\android-sdk\extras\android\m2repository\com\android\support\support-annotations\22.0.0\support-annotations-22.0.0.jar"

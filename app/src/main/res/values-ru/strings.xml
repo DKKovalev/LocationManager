@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LocationManager</string>
+    <string name="action_settings">Настройки</string>
+    <string name="add_new_place_button">При помощи GPS</string>
+    <string name="address">Введите адрес</string>
+    <string name="address_hint">Введите адрес сюда</string>
+    <string name="button_confirm">Добавить</string>
+    <string name="check_box_name_wifi_enabled">Включить Wi-Fi</string>
+    <string name="geocoding_button">Ввод адреса</string>
+    <string name="meters">м.</string>
+    <string name="title_activity_settings">Настройки</string>
+    <string name="title_activity_new_place">Добавить новый профиль</string>
+    <string name="settings_vibrate_title">Вибрация</string>
+    <string name="settings_vibrate_summary">Включить вибрацию при нахождении профиля</string>
+    <string name="settings_update_title">Интервал обновления</string>
+    <string name="settings_update_summary">Задать интервал обновлений</string>
+    <string name="settings_blink_title">Световой сигнал</string>
+    <string name="settings_blink_summary">Включить световое оповещение при нахождении профиля</string>
+    <string name="section_name_settings">Настройки</string>
+    <string name="section_name_set_radius">Область действия настроек</string>
+    <string name="section_name_add_profile">Добавить профиль</string>
+    <string name="radio_button_name_vibrate">Вибровызов</string>
+    <string name="radio_button_name_silent">Бесшумный</string>
+    <string name="radio_button_loud">Звук вкл.</string>
+    <string name="profile_name_hint">Введите имя профиля</string>
+</resources>

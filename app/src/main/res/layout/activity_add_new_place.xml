@@ -7,29 +7,184 @@
     tools:context="locmanager.dkovalev.com.locationmanager.activities.AddNewPlaceActivity">
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/text_object_name"
+        android:elegantTextHeight="false"
+        android:hint="@string/profile_name_hint"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:lines="1"
+        android:maxLength="50" />
+    <View
+        android:layout_height="2dip"
+        android:background="#FF909090"
+        android:layout_width="wrap_content"
+        android:id="@+id/view"
+        android:layout_below="@+id/textView4"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Button"
+        android:text="@string/add_new_place_button"
         android:id="@+id/button_add_place_by_gps"
-        android:layout_below="@+id/text_object_name"
-        android:layout_alignRight="@+id/text_object_name"
-        android:layout_alignEnd="@+id/text_object_name" />
+        android:layout_below="@+id/view"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="20dp" />
 
-    <ListView
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/lv_profiles"
-        android:layout_below="@+id/button_add_place_by_gps"
+        android:text="@string/section_name_add_profile"
+        android:id="@+id/textView4"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:layout_marginTop="21dp"
+        android:layout_below="@+id/check_box_wifi"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/geocoding_button"
+        android:id="@+id/button_add_place_by_geocoding"
+        android:layout_below="@+id/view"
+        android:layout_toLeftOf="@+id/button_add_place_by_gps"
+        android:layout_toStartOf="@+id/button_add_place_by_gps" />
+
+    <View
+        android:layout_height="2dip"
+        android:background="#FF909090"
+        android:layout_width="wrap_content"
+        android:id="@+id/view_1"
+        android:layout_below="@+id/textView5"
+        android:layout_alignRight="@+id/button_add_place_by_gps"
+        android:layout_alignEnd="@+id/button_add_place_by_gps" />
+
+    <SeekBar
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seek_bar_radius"
+        android:max="1000"
+        android:progress="1"
+        android:indeterminate="false"
+        android:layout_below="@+id/view_1"
+        android:layout_alignRight="@+id/button_add_place_by_gps"
+        android:layout_alignEnd="@+id/button_add_place_by_gps"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_seek_bar_scale"
+        android:layout_alignBottom="@+id/seek_bar_radius"
+        android:layout_toLeftOf="@+id/textView6"
+        android:layout_toStartOf="@+id/textView6"
+        android:layout_marginRight="8dp"
+        android:layout_marginEnd="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/section_name_set_radius"
+        android:id="@+id/textView5"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:layout_below="@+id/text_object_name"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="37dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/meters"
+        android:id="@+id/textView6"
+        android:layout_alignBaseline="@+id/text_seek_bar_scale"
+        android:layout_alignBottom="@+id/text_seek_bar_scale"
+        android:layout_alignRight="@+id/button_add_place_by_gps"
+        android:layout_alignEnd="@+id/button_add_place_by_gps" />
+
+    <View
+        android:layout_height="2dip"
+        android:background="#FF909090"
+        android:layout_width="wrap_content"
+        android:id="@+id/view2"
+        android:layout_marginTop="45dp"
+        android:layout_below="@+id/seek_bar_radius"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/section_name_settings"
+        android:id="@+id/textView7"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:layout_alignBottom="@+id/view2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/check_box_name_wifi_enabled"
+        android:id="@+id/check_box_wifi"
+        android:checked="false"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/radioGroup"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view2"
+        android:layout_alignRight="@+id/view"
+        android:layout_alignEnd="@+id/view"
+        android:id="@+id/radioGroup">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_button_name_vibrate"
+            android:id="@+id/vibrate_radio_button"
+            android:checked="false"
+            android:layout_below="@+id/loud_radio_button"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_button_loud"
+            android:id="@+id/loud_radio_button"
+            android:checked="false"
+            android:layout_below="@+id/silent_radio_button"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_button_name_silent"
+            android:id="@+id/silent_radio_button"
+            android:checked="true"
+            android:layout_below="@+id/textView7"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp" />
+
+    </RadioGroup>
+
 </RelativeLayout>
