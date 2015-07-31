@@ -22,62 +22,13 @@
     </layouts>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6e05d9d8-82d8-4083-9e0b-3d761f9fd5aa" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/locmanager/dkovalev/com/locationmanager/assets/CustomAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/locmanager/dkovalev/com/locationmanager/assets/Dumpster.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/locmanager/dkovalev/com/locationmanager/assets/MainApplication.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/locmanager/dkovalev/com/locationmanager/assets/NewProfile.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/locmanager/dkovalev/com/locationmanager/assets/Settings.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/activeandroid_3_1_0_SNAPSHOT.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/list_item.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/gradle_project_sync_data.bin" afterPath="$PROJECT_DIR$/build/intermediates/gradle_project_sync_data.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/locmanager/dkovalev/com/locationmanager/activities/AddNewPlaceActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/locmanager/dkovalev/com/locationmanager/activities/AddNewPlaceActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LocationManager.iml" afterPath="$PROJECT_DIR$/LocationManager.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/locmanager/dkovalev/com/locationmanager/assets/BackgroundIntentService.java" afterPath="$PROJECT_DIR$/app/src/main/java/locmanager/dkovalev/com/locationmanager/assets/BackgroundIntentService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/locmanager/dkovalev/com/locationmanager/activities/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/locmanager/dkovalev/com/locationmanager/activities/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_22_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_22_0_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/floatingactionbutton_1_3_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/floatingactionbutton_1_3_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/library_0_9_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/library_0_9_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/library_2_7_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/library_2_7_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_7_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_7_0_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_ads_7_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_ads_7_0_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_analytics_7_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_analytics_7_0_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_appindexing_7_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_appindexing_7_0_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_appstate_7_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_appstate_7_0_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_base_7_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_base_7_0_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_cast_7_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_cast_7_0_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_drive_7_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_drive_7_0_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_fitness_7_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_fitness_7_0_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_games_7_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_games_7_0_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_gcm_7_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_gcm_7_0_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_identity_7_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_identity_7_0_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_location_7_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_location_7_0_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_maps_7_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_maps_7_0_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_nearby_7_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_nearby_7_0_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_panorama_7_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_panorama_7_0_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_plus_7_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_plus_7_0_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_safetynet_7_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_safetynet_7_0_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_wallet_7_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_wallet_7_0_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_wearable_7_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_wearable_7_0_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/xml/preference_settings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/xml/preference_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/recyclerview_v7_21_0_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/recyclerview_v7_21_0_3.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_v4_22_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_22_0_0.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="LocationManager.iws" />
@@ -119,74 +70,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/locmanager/dkovalev/com/locationmanager/activities/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="154" column="70" selection-start-line="154" selection-start-column="70" selection-end-line="154" selection-end-column="70" />
+            <state vertical-scroll-proportion="-0.8471761">
+              <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
               <folding>
-                <element signature="e#3720#3721#0" expanded="true" />
-                <element signature="e#3753#3754#0" expanded="true" />
-                <element signature="e#6984#6985#0" expanded="true" />
-                <element signature="e#7025#7026#0" expanded="true" />
-                <element signature="method#startBackgroundService#0;class#MainActivity#0" expanded="false" />
-                <element signature="method#onConnectionFailed#0;class#MainActivity#0" expanded="false" />
-                <element signature="e#8608#8609#0" expanded="true" />
-                <element signature="e#8639#8640#0" expanded="true" />
+                <element signature="e#6875#6876#0" expanded="true" />
+                <element signature="e#6916#6917#0" expanded="true" />
+                <element signature="method#createLocationRequest#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#startLocationUpdates#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#stopLocationUpdates#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#createNotification#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#startAddNewPlaceActivity#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#startMapActivity#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_main.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-          <provider editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="27" column="45" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="android-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddNewPlaceActivity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/locmanager/dkovalev/com/locationmanager/activities/AddNewPlaceActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.8519738">
-              <caret line="153" column="43" selection-start-line="153" selection-start-column="43" selection-end-line="153" selection-end-column="43" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2351#3379#0" expanded="true" />
-                <element signature="e#3378#3379#0" expanded="true" />
-                <element signature="e#3924#4156#0" expanded="true" />
-                <element signature="e#4155#4156#0" expanded="true" />
-                <element signature="e#4998#5734#0" expanded="true" />
-                <element signature="e#5733#5734#0" expanded="true" />
-                <element signature="e#5795#5955#0" expanded="true" />
-                <element signature="e#5954#5955#0" expanded="true" />
-                <element signature="e#6614#7335#0" expanded="true" />
-                <element signature="e#7334#7335#0" expanded="true" />
-                <element signature="e#7412#7413#0" expanded="true" />
-                <element signature="e#7443#7444#0" expanded="true" />
-                <element signature="e#7490#7491#0" expanded="true" />
-                <element signature="e#7522#7523#0" expanded="true" />
-                <element signature="e#7568#7569#0" expanded="true" />
-                <element signature="e#7599#7600#0" expanded="true" />
-                <element signature="e#7644#7645#0" expanded="true" />
-                <element signature="e#7674#7675#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Dumpster.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/locmanager/dkovalev/com/locationmanager/assets/Dumpster.java">
+      <file leaf-file-name="SettingsActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/locmanager/dkovalev/com/locationmanager/activities/SettingsActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="361" column="32" selection-start-line="361" selection-start-column="32" selection-end-line="361" selection-end-column="32" />
+              <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -206,6 +115,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="DKKovalev" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
@@ -1914,7 +1828,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/locmanager/dkovalev/com/locationmanager/assets/BackgroundService.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/locmanager/dkovalev/com/locationmanager/assets/LocationUpdateService.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/locmanager/dkovalev/com/locationmanager/assets/LocationHandler.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/locmanager/dkovalev/com/locationmanager/assets/BackgroundIntentService.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_new_place.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/locmanager/dkovalev/com/locationmanager/activities/NewPlaceActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_settings.xml" />
@@ -1954,9 +1867,10 @@
         <option value="$PROJECT_DIR$/app/src/main/java/locmanager/dkovalev/com/locationmanager/assets/CustomAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/list_item.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/locmanager/dkovalev/com/locationmanager/activities/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/locmanager/dkovalev/com/locationmanager/assets/Dumpster.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/locmanager/dkovalev/com/locationmanager/assets/BackgroundIntentService.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/locmanager/dkovalev/com/locationmanager/activities/AddNewPlaceActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/locmanager/dkovalev/com/locationmanager/activities/MainActivity.java" />
       </list>
     </option>
   </component>
@@ -2138,7 +2052,7 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="FullScreen" value="false" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="192.168.56.101:5555" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="HT18FV204068" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
     <property name="android.project.structure.last.selected" value="SDK Location" />
@@ -2373,7 +2287,13 @@
       <option name="project" value="LOCAL" />
       <updated>1438250976635</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Some serious changes has been made">
+      <created>1438336160010</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1438336160010</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView">
@@ -2387,7 +2307,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
@@ -2396,18 +2316,19 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32765958" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32978722" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32659575" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32985073" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4287234" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42765957" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22441365" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2585288" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995737" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39255318" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -2415,7 +2336,6 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44340974" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -2460,11 +2380,13 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="12" />
-    <option name="LAST_COMMIT_MESSAGE" value="12" />
+    <MESSAGE value="Some serious changes has been made" />
+    <MESSAGE value="Almost Done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Almost Done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="30" />
+      <option name="time" value="42" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -2714,31 +2636,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/locmanager/dkovalev/com/locationmanager/activities/MapsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/locmanager/dkovalev/com/locationmanager/activities/SettingsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/preference_settings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="55" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/locmanager/dkovalev/com/locationmanager/assets/BackgroundIntentService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="46" column="52" selection-start-line="46" selection-start-column="52" selection-end-line="46" selection-end-column="52" />
         </state>
       </provider>
     </entry>
@@ -2779,30 +2680,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/locmanager/dkovalev/com/locationmanager/assets/Settings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="1" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/locmanager/dkovalev/com/locationmanager/assets/Profile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="26" column="59" selection-start-line="26" selection-start-column="59" selection-end-line="26" selection-end-column="59" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/locmanager/dkovalev/com/locationmanager/assets/NewProfile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-          <folding>
-            <element signature="e#539#540#0" expanded="false" />
-            <element signature="e#562#563#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2844,28 +2726,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/locmanager/dkovalev/com/locationmanager/activities/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/locmanager/dkovalev/com/locationmanager/assets/NewProfile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5964912">
+          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/locmanager/dkovalev/com/locationmanager/assets/Settings.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="154" column="70" selection-start-line="154" selection-start-column="70" selection-end-line="154" selection-end-column="70" />
-          <folding>
-            <element signature="e#3720#3721#0" expanded="true" />
-            <element signature="e#3753#3754#0" expanded="true" />
-            <element signature="e#6984#6985#0" expanded="true" />
-            <element signature="e#7025#7026#0" expanded="true" />
-            <element signature="method#startBackgroundService#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onConnectionFailed#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#8608#8609#0" expanded="true" />
-            <element signature="e#8639#8640#0" expanded="true" />
-            <element signature="method#startAddNewPlaceActivity#0;class#MainActivity#0" expanded="false" />
-          </folding>
+          <caret line="27" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../android-sdk/sources/android-22/android/location/Location.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.0666667">
+          <caret line="287" column="24" selection-start-line="287" selection-start-column="24" selection-end-line="287" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/locmanager/dkovalev/com/locationmanager/activities/MapsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.53333336">
+          <caret line="73" column="32" selection-start-line="73" selection-start-column="32" selection-end-line="73" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/locmanager/dkovalev/com/locationmanager/assets/BackgroundIntentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6333333">
+          <caret line="78" column="20" selection-start-line="78" selection-start-column="20" selection-end-line="78" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/locmanager/dkovalev/com/locationmanager/activities/AddNewPlaceActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.8519738">
-          <caret line="153" column="43" selection-start-line="153" selection-start-column="43" selection-end-line="153" selection-end-column="43" />
+        <state vertical-scroll-proportion="-0.33333334">
+          <caret line="139" column="53" selection-start-line="139" selection-start-column="53" selection-end-line="139" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2351#3379#0" expanded="true" />
@@ -2886,6 +2790,33 @@
             <element signature="e#7599#7600#0" expanded="true" />
             <element signature="e#7644#7645#0" expanded="true" />
             <element signature="e#7674#7675#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/locmanager/dkovalev/com/locationmanager/activities/SettingsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/locmanager/dkovalev/com/locationmanager/activities/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.8471761">
+          <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+          <folding>
+            <element signature="e#6875#6876#0" expanded="true" />
+            <element signature="e#6916#6917#0" expanded="true" />
+            <element signature="method#createLocationRequest#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#startLocationUpdates#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#stopLocationUpdates#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#createNotification#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#startAddNewPlaceActivity#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#startMapActivity#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>

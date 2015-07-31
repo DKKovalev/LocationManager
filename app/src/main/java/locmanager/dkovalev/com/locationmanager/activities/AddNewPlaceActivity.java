@@ -137,7 +137,7 @@ public class AddNewPlaceActivity extends ActionBarActivity {
                 if (objectNameEditText.getText().toString().isEmpty()) {
                     Toast.makeText(AddNewPlaceActivity.this, "Enter place name", Toast.LENGTH_LONG).show();
                 } else {
-                    Settings settings = new Settings(soundProfile, wirelessProfile);
+                    Settings settings = new Settings(wirelessProfile, soundProfile);
                     settings.save();
 
                     NewProfile newProfile = new NewProfile(objectNameEditText.getText().toString(), lat, lng, radius, settings);

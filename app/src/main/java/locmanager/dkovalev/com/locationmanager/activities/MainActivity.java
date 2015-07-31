@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.location.Location;
+import android.media.AudioManager;
 import android.os.Build;
 import android.os.Environment;
 import android.support.v4.app.NotificationCompat;
@@ -41,6 +42,7 @@ import org.json.JSONObject;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.sql.Time;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -69,10 +71,10 @@ public class MainActivity extends ActionBarActivity implements LocationListener,
 
     private BroadcastReceiver receiver;
 
-    private SharedPreferences settingsPreference;
-
     private List<NewProfile> newProfiles;
     private ArrayAdapter<NewProfile> profileArrayAdapter;
+
+    private AudioManager audioManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,11 +83,9 @@ public class MainActivity extends ActionBarActivity implements LocationListener,
         setContentView(R.layout.activity_main);
         showAll();
 
-        settingsPreference = PreferenceManager.getDefaultSharedPreferences(this);
         setupUI();
         buildGoogleAPIClient();
         notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-
 
         receiver = new BroadcastReceiver() {
             @Override
@@ -94,15 +94,15 @@ public class MainActivity extends ActionBarActivity implements LocationListener,
                 if (resultCode == RESULT_OK) {
                     double resultValueLat = intent.getDoubleExtra("resultValueLat", 0.0);
                     double resultValueLng = intent.getDoubleExtra("resultValueLng", 0.0);
-                    createNotification(MainActivity.this, resultValueLat, resultValueLng);
+                    Boolean isCoordsFound = intent.getBooleanExtra("coordsFound", false);
+                    getProfile(isCoordsFound);
+                    createNotification(MainActivity.this, resultValueLat, resultValueLng, isCoordsFound);
                     startLocationUpdates();
                 }
             }
         };
-    }
 
-    private int getUpdateTime(int updateTime) {
-        return updateTime;
+        audioManager = (AudioManager) getBaseContext().getSystemService(Context.AUDIO_SERVICE);
     }
 
     @Override
@@ -110,8 +110,7 @@ public class MainActivity extends ActionBarActivity implements LocationListener,
         super.onResume();
         IntentFilter filter = new IntentFilter(BackgroundIntentService.ACTION);
         LocalBroadcastManager.getInstance(this).registerReceiver(receiver, filter);
-        int updateTime = Integer.valueOf(settingsPreference.getString("update_time", "0"));
-        createLocationRequest(updateTime);
+        createLocationRequest();
 
     }
 
@@ -151,9 +150,8 @@ public class MainActivity extends ActionBarActivity implements LocationListener,
         startLocationUpdatesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //startLocationUpdates();
-                //startLocationUpdatesButton.setVisibility(View.GONE);
                 showAll();
+                audioManager.setRingerMode(AudioManager.RINGER_MODE_VIBRATE);
             }
         });
 
@@ -165,8 +163,7 @@ public class MainActivity extends ActionBarActivity implements LocationListener,
                 .addOnConnectionFailedListener(this)
                 .addApi(LocationServices.API)
                 .build();
-        /*updateTime = Integer.valueOf(settingsPreference.getString("update_time", "0"));
-        createLocationRequest(updateTime);*/
+        createLocationRequest();
     }
 
     @Override
@@ -212,10 +209,10 @@ public class MainActivity extends ActionBarActivity implements LocationListener,
 
     }
 
-    private void createLocationRequest(int updateTime) {
+    private void createLocationRequest() {
         locationRequest = new LocationRequest();
-        locationRequest.setInterval(getUpdateTime(updateTime));
-        locationRequest.setFastestInterval(updateTime / 2);
+        locationRequest.setInterval(60000);
+        locationRequest.setFastestInterval(30000);
         locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
     }
 
@@ -245,7 +242,13 @@ public class MainActivity extends ActionBarActivity implements LocationListener,
         super.onPause();
     }
 
-    private void createNotification(Context context, Double lat, Double lng) {
+    private void createNotification(Context context, Double lat, Double lng, Boolean coordsFound) {
+        String isFound = "Nope";
+
+        if (coordsFound == true) {
+            isFound = "Yeah";
+        }
+
         Intent intent = new Intent(context, MainActivity.class);
         TaskStackBuilder stackBuilder = TaskStackBuilder.create(context);
         stackBuilder.addNextIntent(intent);
@@ -253,7 +256,7 @@ public class MainActivity extends ActionBarActivity implements LocationListener,
         builder = new NotificationCompat.Builder(context)
                 .setSmallIcon(R.drawable.ic_launcher)
                 .setContentTitle("Notification")
-                .setContentText(String.valueOf(lat + " " + lng))
+                .setContentText(String.valueOf(lat + " " + lng + " " + isFound))
                 .setContentIntent(pendingIntent);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
@@ -310,18 +313,40 @@ public class MainActivity extends ActionBarActivity implements LocationListener,
                     .append(newProfile.lat)
                     .append("Lng: ")
                     .append(newProfile.lng)
+                    .append("Radius: ")
+                    .append(newProfile.radius)
                     .append("Settings: ")
                     .append(newProfile.settings)
                     .append("\n");
-
-            //List<Profile> result = new Select().from(Profile.class).execute();
         }
         Toast.makeText(this, stringBuilder.toString(), Toast.LENGTH_LONG).show();
 
         ArrayList<NewProfile> profiles1 = new ArrayList<>();
         profileArrayAdapter = new ArrayAdapter<NewProfile>(this, android.R.layout.simple_list_item_1, profiles1);
-        //Collections.reverse(newProfiles);
         profileArrayAdapter.addAll(newProfiles);
         profileArrayAdapter.notifyDataSetChanged();
+    }
+
+    private void getProfile(Boolean isCoordsFound) {
+        if (isCoordsFound) {
+            Select select = new Select();
+            NewProfile newProfile = select.from(NewProfile.class).executeSingle();
+            String soundSetting = newProfile.settings.soundSetting;
+            startLocationUpdatesButton.setText(soundSetting);
+
+            switch (soundSetting){
+                case "loud":
+                    audioManager.setRingerMode(AudioManager.RINGER_MODE_NORMAL);
+                    break;
+                case "silent":
+                    audioManager.setRingerMode(AudioManager.RINGER_MODE_SILENT);
+                    break;
+                case "vibrate":
+                    audioManager.setRingerMode(AudioManager.RINGER_MODE_VIBRATE);
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 }

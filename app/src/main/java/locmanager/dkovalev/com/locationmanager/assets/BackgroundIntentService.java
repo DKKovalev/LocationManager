@@ -6,6 +6,11 @@ import android.content.Intent;
 import android.os.Handler;
 import android.support.v4.content.LocalBroadcastManager;
 
+import com.activeandroid.query.Select;
+
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class BackgroundIntentService extends IntentService {
 
@@ -16,6 +21,10 @@ public class BackgroundIntentService extends IntentService {
     private double lat;
     private double lng;
 
+    private Boolean isCoordsFound;
+
+    private NewProfile newProfile;
+
     public BackgroundIntentService() {
         super("Background");
     }
@@ -25,6 +34,8 @@ public class BackgroundIntentService extends IntentService {
         lat = intent.getDoubleExtra("lat", 0.0);
         lng = intent.getDoubleExtra("lng", 0.0);
 
+        isCoordsFound = checkCoords();
+
         handler.removeCallbacks(updateUI);
         handler.postDelayed(updateUI, 1000);
 
@@ -32,6 +43,7 @@ public class BackgroundIntentService extends IntentService {
         intent1.putExtra("resultCode", Activity.RESULT_OK);
         intent1.putExtra("resultValueLat", lat);
         intent1.putExtra("resultValueLng", lng);
+        intent1.putExtra("coordsFound", isCoordsFound);
         LocalBroadcastManager.getInstance(this).sendBroadcast(intent1);
     }
 
@@ -46,6 +58,7 @@ public class BackgroundIntentService extends IntentService {
             intent1.putExtra("resultCode", Activity.RESULT_OK);
             intent1.putExtra("resultValueLat", lat);
             intent1.putExtra("resultValueLng", lng);
+            intent1.putExtra("coordsFound", isCoordsFound);
         }
     };
 
@@ -53,5 +66,39 @@ public class BackgroundIntentService extends IntentService {
     public void onCreate() {
         super.onCreate();
         intent1 = new Intent(ACTION);
+    }
+
+    private Boolean checkCoords() {
+        Boolean placeFound = false;
+
+        try {
+            Double latToFind = getProfileByLat().lat;
+            Double lngToFind = getProfileByLng().lng;
+            if (lat == latToFind && lng == lngToFind) {
+                placeFound = true;
+            } else {
+                placeFound = false;
+            }
+            return placeFound;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    private NewProfile getProfileByLat() {
+        try {
+            return new Select().from(NewProfile.class).where("lat = ?", lat).executeSingle();
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
+    private NewProfile getProfileByLng() {
+        try {
+            return new Select().from(NewProfile.class).where("lng = ?", lng).executeSingle();
+        } catch (Exception e) {
+            return null;
+        }
     }
 }
