@@ -10,23 +10,24 @@ import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.location.Location;
 import android.os.Build;
+import android.os.Environment;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.TaskStackBuilder;
 import android.support.v4.content.LocalBroadcastManager;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
-import android.telephony.CellIdentityLte;
-import android.telephony.CellInfoLte;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 import android.preference.PreferenceManager;
 
+import com.activeandroid.query.Select;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationListener;
@@ -34,8 +35,19 @@ import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
 import com.melnykov.fab.FloatingActionButton;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 import locmanager.dkovalev.com.locationmanager.R;
 import locmanager.dkovalev.com.locationmanager.assets.BackgroundIntentService;
+import locmanager.dkovalev.com.locationmanager.assets.NewProfile;
+import locmanager.dkovalev.com.locationmanager.assets.Profile;
 
 public class MainActivity extends ActionBarActivity implements LocationListener, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
 
@@ -59,11 +71,16 @@ public class MainActivity extends ActionBarActivity implements LocationListener,
 
     private SharedPreferences settingsPreference;
 
+    private List<NewProfile> newProfiles;
+    private ArrayAdapter<NewProfile> profileArrayAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_ACTION_BAR_OVERLAY);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        showAll();
+
         settingsPreference = PreferenceManager.getDefaultSharedPreferences(this);
         setupUI();
         buildGoogleAPIClient();
@@ -82,10 +99,9 @@ public class MainActivity extends ActionBarActivity implements LocationListener,
                 }
             }
         };
-
     }
 
-    private int getUpdateTime(int updateTime){
+    private int getUpdateTime(int updateTime) {
         return updateTime;
     }
 
@@ -97,11 +113,13 @@ public class MainActivity extends ActionBarActivity implements LocationListener,
         int updateTime = Integer.valueOf(settingsPreference.getString("update_time", "0"));
         createLocationRequest(updateTime);
 
-        startLocationUpdatesButton.setText(settingsPreference.getString("update_time", "NOPE"));
     }
 
     private void setupUI() {
+
         placesListView = (ListView) findViewById(R.id.list_of_places_lv);
+        placesListView.setAdapter(profileArrayAdapter);
+
 
         FloatingActionButton fab_addNewPlace = (FloatingActionButton) findViewById(R.id.fab_add_new_place);
         fab_addNewPlace.attachToListView(placesListView);
@@ -135,6 +153,7 @@ public class MainActivity extends ActionBarActivity implements LocationListener,
             public void onClick(View v) {
                 //startLocationUpdates();
                 //startLocationUpdatesButton.setVisibility(View.GONE);
+                showAll();
             }
         });
 
@@ -280,5 +299,29 @@ public class MainActivity extends ActionBarActivity implements LocationListener,
         return super.onOptionsItemSelected(item);
     }
 
+    public void showAll() {
+        Select select = new Select();
+        newProfiles = select.all().from(NewProfile.class).execute();
+        StringBuilder stringBuilder = new StringBuilder();
+        for (NewProfile newProfile : newProfiles) {
+            stringBuilder.append("Name: ")
+                    .append(newProfile.title)
+                    .append("Lat: ")
+                    .append(newProfile.lat)
+                    .append("Lng: ")
+                    .append(newProfile.lng)
+                    .append("Settings: ")
+                    .append(newProfile.settings)
+                    .append("\n");
 
+            //List<Profile> result = new Select().from(Profile.class).execute();
+        }
+        Toast.makeText(this, stringBuilder.toString(), Toast.LENGTH_LONG).show();
+
+        ArrayList<NewProfile> profiles1 = new ArrayList<>();
+        profileArrayAdapter = new ArrayAdapter<NewProfile>(this, android.R.layout.simple_list_item_1, profiles1);
+        //Collections.reverse(newProfiles);
+        profileArrayAdapter.addAll(newProfiles);
+        profileArrayAdapter.notifyDataSetChanged();
+    }
 }
