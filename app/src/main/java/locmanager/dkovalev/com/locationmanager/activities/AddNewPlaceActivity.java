@@ -1,6 +1,7 @@
 package locmanager.dkovalev.com.locationmanager.activities;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
@@ -18,12 +19,12 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.activeandroid.query.Select;
+
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 import locmanager.dkovalev.com.locationmanager.assets.NewProfile;
-import locmanager.dkovalev.com.locationmanager.assets.Profile;
 import locmanager.dkovalev.com.locationmanager.R;
 import locmanager.dkovalev.com.locationmanager.assets.Settings;
 
@@ -32,7 +33,6 @@ public class AddNewPlaceActivity extends ActionBarActivity {
     private EditText objectNameEditText;
     private Button createObjectByGPSButton;
     private Button createObjectByGeocodingButton;
-    private TextView radiusText;
     private RadioButton silentRadioButton;
     private RadioButton loudRadioButton;
     private RadioButton vibrateRadioButton;
@@ -45,7 +45,6 @@ public class AddNewPlaceActivity extends ActionBarActivity {
 
     private String soundProfile;
     private String wirelessProfile;
-    private int radius;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,8 +65,9 @@ public class AddNewPlaceActivity extends ActionBarActivity {
         objectNameEditText = (EditText) findViewById(R.id.text_object_name);
         createObjectByGPSButton = (Button) findViewById(R.id.button_add_place_by_gps);
         createObjectByGeocodingButton = (Button) findViewById(R.id.button_add_place_by_geocoding);
-        radiusText = (TextView) findViewById(R.id.text_seek_bar_scale);
-        radiusText.setText("0");
+
+        soundProfile = "silent";
+        wirelessProfile = "wifi_on";
 
 
         onClickListener = new View.OnClickListener() {
@@ -79,15 +79,12 @@ public class AddNewPlaceActivity extends ActionBarActivity {
                 switch (soundSettingButton.getId()) {
                     case R.id.silent_radio_button:
                         soundProfile = "silent";
-                        Toast.makeText(AddNewPlaceActivity.this, soundProfile, Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.loud_radio_button:
                         soundProfile = "loud";
-                        Toast.makeText(AddNewPlaceActivity.this, soundProfile, Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.vibrate_radio_button:
                         soundProfile = "vibrate";
-                        Toast.makeText(AddNewPlaceActivity.this, soundProfile, Toast.LENGTH_SHORT).show();
                         break;
                     default:
                         break;
@@ -108,26 +105,7 @@ public class AddNewPlaceActivity extends ActionBarActivity {
             public void onClick(View v) {
                 if (wifiCheckBox.isChecked()) {
                     wirelessProfile = "wifi_off";
-                }
-            }
-        });
-
-        final SeekBar setRadiusBar = (SeekBar) findViewById(R.id.seek_bar_radius);
-        setRadiusBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                radiusText.setText(String.valueOf(seekBar.getProgress()));
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-                radiusText.setText(String.valueOf(seekBar.getProgress()));
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-                radiusText.setText(String.valueOf(seekBar.getProgress()));
-                radius = seekBar.getProgress();
+                } else wirelessProfile = "wifi_on";
             }
         });
 
@@ -136,14 +114,22 @@ public class AddNewPlaceActivity extends ActionBarActivity {
             public void onClick(View v) {
                 if (objectNameEditText.getText().toString().isEmpty()) {
                     Toast.makeText(AddNewPlaceActivity.this, "Enter place name", Toast.LENGTH_LONG).show();
+                } else if (isNameisNotUnique(objectNameEditText.getText().toString())) {
+                    Toast.makeText(AddNewPlaceActivity.this, "The name has been taken", Toast.LENGTH_SHORT).show();
+                } else if (isCoordsIsNotUnique(lat, lng)) {
+                    Toast.makeText(AddNewPlaceActivity.this, "Cannot create profile. Your coords has been used", Toast.LENGTH_SHORT).show();
                 } else {
-                    Settings settings = new Settings(wirelessProfile, soundProfile);
-                    settings.save();
 
-                    NewProfile newProfile = new NewProfile(objectNameEditText.getText().toString(), lat, lng, radius, settings);
-                    newProfile.save();
+                    Intent intent = new Intent();
+                    intent.putExtra("title", objectNameEditText.getText().toString());
+                    intent.putExtra("lat", lat);
+                    intent.putExtra("lng", lng);
+                    intent.putExtra("soundSettings", soundProfile);
+                    intent.putExtra("wirelessSettings", wirelessProfile);
+                    setResult(RESULT_OK, intent);
 
                     Toast.makeText(AddNewPlaceActivity.this, "File created", Toast.LENGTH_LONG).show();
+                    AddNewPlaceActivity.this.finish();
                 }
             }
         });
@@ -151,10 +137,17 @@ public class AddNewPlaceActivity extends ActionBarActivity {
         createObjectByGeocodingButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                createAddressAlertDialog();
+                if (objectNameEditText.getText().toString().isEmpty()) {
+                    Toast.makeText(AddNewPlaceActivity.this, "Enter place name", Toast.LENGTH_LONG).show();
+                } else if (isNameisNotUnique(objectNameEditText.getText().toString())) {
+                    Toast.makeText(AddNewPlaceActivity.this, "The name has been taken", Toast.LENGTH_SHORT).show();
+                } else if (isCoordsIsNotUnique(lat, lng)) {
+                    Toast.makeText(AddNewPlaceActivity.this, "Cannot create profile. Your coords has been used", Toast.LENGTH_SHORT).show();
+                } else {
+                    createAddressAlertDialog();
+                }
             }
         });
-
 
     }
 
@@ -172,17 +165,17 @@ public class AddNewPlaceActivity extends ActionBarActivity {
         submitAddressButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Settings settings = new Settings(soundProfile, wirelessProfile);
-                settings.save();
 
-                NewProfile newProfile = new NewProfile(objectNameEditText.getText().toString()
-                        , geocoding(addressEditText.getText().toString())[0]
-                        , geocoding(addressEditText.getText().toString())[1]
-                        , radius
-                        , settings);
-                newProfile.save();
+                Intent intent = new Intent();
+                intent.putExtra("title", objectNameEditText.getText().toString());
+                intent.putExtra("lat", geocoding(addressEditText.getText().toString())[0]);
+                intent.putExtra("lng", geocoding(addressEditText.getText().toString())[1]);
+                intent.putExtra("soundSettings", soundProfile);
+                intent.putExtra("wirelessSettings", wirelessProfile);
+                setResult(RESULT_OK, intent);
 
                 Toast.makeText(AddNewPlaceActivity.this, "File created", Toast.LENGTH_LONG).show();
+                AddNewPlaceActivity.this.finish();
                 dialog.dismiss();
 
             }
@@ -230,6 +223,32 @@ public class AddNewPlaceActivity extends ActionBarActivity {
         }
 
         return coords;
+    }
+
+    private Boolean isNameisNotUnique(String title) {
+        Select select = new Select();
+        try {
+            NewProfile newProfile = select.from(NewProfile.class).where("title =?", title).executeSingle();
+            if (newProfile.title.equals(title)) {
+                return true;
+            } else return false;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    private Boolean isCoordsIsNotUnique(double lat, double lng) {
+        Select select = new Select();
+        try {
+            NewProfile newProfile = select.from(NewProfile.class).where("lat =?", lat).where("lng =?", lng).executeSingle();
+            if (newProfile.lat == lat && newProfile.lng == lng) {
+                return true;
+            } else return false;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 }
 

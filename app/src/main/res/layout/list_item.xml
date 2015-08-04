@@ -1,15 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <TextView
+        android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Large Text"
-        android:id="@+id/title_tv"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:text="title" />
 
-</RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_wireless_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="wirelesssetting"
+            android:layout_below="@+id/tv_sound_settings"
+            android:layout_toRightOf="@+id/tv_lng"
+            android:layout_toEndOf="@+id/tv_lng"
+            android:layout_marginLeft="50dp" />
+
+        <TextView
+            android:id="@+id/tv_sound_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="soundsetting"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/tv_lat"
+            android:layout_toEndOf="@+id/tv_lat"
+            android:layout_marginLeft="50dp" />
+
+        <TextView
+            android:id="@+id/tv_lat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="lat"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/tv_lng"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="lng"
+            android:layout_below="@+id/tv_lat"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+    </RelativeLayout>
+</LinearLayout>

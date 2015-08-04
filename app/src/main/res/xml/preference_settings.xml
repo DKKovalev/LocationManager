@@ -9,4 +9,8 @@
         android:key="blink"
         android:summary="@string/settings_blink_summary"
         android:title="@string/settings_blink_title" />
+    <Preference
+        android:key="clear"
+        android:summary="@string/settings_clear_db_summaty"
+        android:title="@string/settings_clear_db_title" />
 </PreferenceScreen>
